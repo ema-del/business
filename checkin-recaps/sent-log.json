@@ -1,0 +1,31 @@
+{
+  "_readme": "Tracks Growth OS Check-In Form submissions already recapped for Ema, keyed by client email + exact sheet Timestamp. Rule: when the 'Check' trigger runs, match Gmail 'New Check-In Form Response' emails to sheet rows by timestamp; skip any (email, timestamp) pair already listed here; if a client has a NEW timestamp not listed, recap it and append it here. Seeded on 2026-09-13 with every row already in the sheet at that time (so historical submissions aren't dumped all at once) plus the Sean Yen test recap.",
+  "sheet_id": "1huBt4G6G1v-OSEUKEWpZSbsnaNoZ2bcgI0vL0AM5cwo",
+  "sent": [
+    { "email": "hello@thriveonlineacademy.org", "name": "Hannah Thomas", "timestamp": "3/27/2026 14:33:31" },
+    { "email": "julian@englisher.co.uk", "name": "Julian Englisher", "timestamp": "4/2/2026 11:34:46" },
+    { "email": "joe@slateradvising.com", "name": "Joe Slater", "timestamp": "4/20/2026 21:16:30" },
+    { "email": "hello@thriveonlineacademy.org", "name": "Hannah Thomas", "timestamp": "4/27/2026 11:56:02" },
+    { "email": "peter@gogfm.org", "name": "Peter", "timestamp": "4/27/2026 16:21:01" },
+    { "email": "sarahmack@seoulquest.com", "name": "Sarah Mack", "timestamp": "4/29/2026 15:55:44" },
+    { "email": "julian@englisher.co.uk", "name": "Julian Millidge", "timestamp": "4/30/2026 9:33:09" },
+    { "email": "pinnacleacademicsolutions@gmail.com", "name": "Grigory", "timestamp": "5/5/2026 15:59:29" },
+    { "email": "ps@petersorgenfrei.com", "name": "Peter Sorgenfrei", "timestamp": "5/6/2026 13:05:35" },
+    { "email": "joe@slateradvising.com", "name": "Joe Slater", "timestamp": "5/27/2026 19:01:55" },
+    { "email": "julian@englisher.co.uk", "name": "Julian Millidge", "timestamp": "6/1/2026 10:51:56" },
+    { "email": "pinnacleacademicsolutions@gmail.com", "name": "Grigory", "timestamp": "6/1/2026 20:40:21" },
+    { "email": "peter@gogfm.org", "name": "Peter", "timestamp": "6/2/2026 4:17:15" },
+    { "email": "anna@sigmaeducation.net", "name": "Anna Teunis", "timestamp": "6/2/2026 5:29:23" },
+    { "email": "ps@petersorgenfrei.com", "name": "Peter Sorgenfrei", "timestamp": "6/2/2026 8:09:43" },
+    { "email": "sarahmack@seoulquest.com", "name": "Sarah Elizabeth Mack", "timestamp": "6/4/2026 11:29:04" },
+    { "email": "hello@thriveonlineacademy.org", "name": "Hannah Thomas", "timestamp": "6/8/2026 10:15:40" },
+    { "email": "info@ivyprepedu.com", "name": "Briana", "timestamp": "6/11/2026 19:32:56" },
+    { "email": "jack@collegeconsulting.us", "name": "Jack Delehey", "timestamp": "6/25/2026 17:50:50" },
+    { "email": "Devon@collegeessayguy.com", "name": "Devon Sawyer", "timestamp": "7/1/2026 1:38:27" },
+    { "email": "alexander@linguaverna.com", "name": "Alex", "timestamp": "7/19/2026 15:11:29" },
+    { "email": "jack@collegeconsulting.us", "name": "Jack Delehey", "timestamp": "8/19/2026 17:40:31" },
+    { "email": "david@collegezoom.com", "name": "David", "timestamp": "8/20/2026 9:38:06" },
+    { "email": "amaricar@myclass101.com", "name": "Athaviya Maricar", "timestamp": "8/24/2026 5:26:59" },
+    { "email": "sean@personalizedprep.com", "name": "Sean Yen", "timestamp": "8/31/2026 23:53:55", "recap_delivered_at": "2026-09-13" }
+  ]
+}
