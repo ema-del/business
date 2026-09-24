@@ -42,6 +42,11 @@ Quick version:
 - None of the banned AI words (leverage, unlock, seamless, elevate, etc.).
 - Short paragraphs, contractions, specific numbers, take a stance.
 
+# How we do the work (Pacow Playbook)
+Before advising on or producing ads, funnels, VSLs, emails/SMS, sales scripts, onboarding or coaching, follow our SOPs. Don't give generic advice.
+- Start with the Google Doc "00. Pacow Playbook Index (Claude)" in Drive folder "08. Templates & SOPs". It lists every SOP, template and script by topic, with file ids, plus our 15 core rules.
+- Open the specific SOP it points to before doing the task.
+
 # Clients
 Before doing anything for a client (recaps, ads, copy, emails, call prep), read their profile first.
 - Profiles: Google Drive folder "00. Client Profiles (Claude)" inside "01. Clients" (folder id 1yryquCGWQNIS-kUvOm81Wjqg1SHFEw6f). One doc per client, named "Client Profile: Name (Business)".
