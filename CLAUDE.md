@@ -44,8 +44,9 @@ Quick version:
 
 # How we do the work (Pacow Playbook)
 Before advising on or producing ads, funnels, VSLs, emails/SMS, sales scripts, onboarding or coaching, follow our SOPs. Don't give generic advice.
-- Start with the Google Doc "00. Pacow Playbook Index (Claude)" in Drive folder "08. Templates & SOPs". It lists every SOP, template and script by topic, with file ids, plus our 15 core rules.
-- Open the specific SOP it points to before doing the task.
+- **What we teach clients:** Google Doc "Pacow Playbook (from Skool)" (file id 1Iw8Te3gz7iEGDkHsCOUjqO6OEIopa0COEoxIzlnSWAY), in "01. Clients". It summarises our whole Skool course: Part 1 Growth Accelerator (offer, sales, IG, messenger, content, ads strategy, free training) and Part 2 Paid Ads Mastery (ad foundations, killer ads, every funnel type, scaling and optimizing). Ends with a table of contents linking every Skool module. Use it for ads strategy, media buying, scaling/kill rules and coaching answers, and link clients to the right Skool module.
+- **How the team delivers:** Google Doc "00. Pacow Playbook Index (Claude)" in Drive folder "08. Templates & SOPs". It lists every SOP, template and script by topic, with file ids, plus our 15 core rules.
+- Open the specific section or SOP before doing the task. If the Skool course and an SOP disagree, ask me which one is current.
 
 # Clients
 Before doing anything for a client (recaps, ads, copy, emails, call prep), read their profile first.
