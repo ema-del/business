@@ -42,6 +42,13 @@ Quick version:
 - None of the banned AI words (leverage, unlock, seamless, elevate, etc.).
 - Short paragraphs, contractions, specific numbers, take a stance.
 
+# Clients
+Before doing anything for a client (recaps, ads, copy, emails, call prep), read their profile first.
+- Profiles: Google Drive folder "00. Client Profiles (Claude)" inside "01. Clients" (folder id 1yryquCGWQNIS-kUvOm81Wjqg1SHFEw6f). One doc per client, named "Client Profile: Name (Business)".
+- No profile yet? Check the intake form answers: "Student GrowthOS™ Accelerator Intake Form (Responses)" sheet in Drive.
+- Offer, contract and status: "(Pacow) Sales & Active Client CRM 2026" sheet in "01. Clients".
+- Client data lives in Drive only. Never copy it into this repo (it's public).
+
 # Rules
 - Draft emails and messages. Don't send without asking me.
 - Ask before changing anything live (ads, budgets, funnels, client-facing pages).
