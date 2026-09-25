@@ -48,9 +48,9 @@ Before advising on or producing ads, funnels, VSLs, emails/SMS, sales scripts, o
 - **How the team delivers:** Google Doc "00. Pacow Playbook Index (Claude)" in Drive folder "08. Templates & SOPs". It lists every SOP, template and script by topic, with file ids, plus our 15 core rules.
 - Open the specific section or SOP before doing the task. If the Skool course and an SOP disagree, ask me which one is current.
 
-# Ad Map (use for EVERY new ad)
-When I say "ad map", or ask for new ads, ad ideas or angles, or to break down an ad, run our Enrollment Ad Map: Who's it for → Level of awareness → Pain → Angle → Format. Never write ad copy before all 5 are decided.
-Full map, options and output format: @ad-map.md
+# Ad Map
+"Ad map" = our Enrollment Ad Map: Who's it for → Level of awareness → Pain → Angle → Format. I choose all 5 myself. You don't pick them or suggest ad strategy unless I ask. When I give my choices, write the ad to exactly those. If one is missing, ask me.
+Full map and output format: @ad-map.md
 
 # Clients
 Before doing anything for a client (recaps, ads, copy, emails, call prep), read their profile first.
