@@ -38,6 +38,25 @@ CPM (audience/reach) → CTR (creative/copy) → LPCR (landing page/offer) → C
 
 **Rule: never blame a downstream stage while an upstream one is still broken** — but two bottlenecks can also be genuinely independent (e.g. a landing page problem and a call-reminder/show-up problem at the same time). Check whether a downstream miss actually traces to the upstream one before assuming it does.
 
+## Backward decision-tree method (the default way to diagnose ANY shortfall)
+
+When the ask is "why is [bottom-line number] low" (booked calls, new clients, ROI — for a client, or for Pacow's own funnel), do not jump straight to the two or three usual suspects. Every sheet has ~20 numbers in the chain between spend and that bottom-line result, and any one of them can be the actual root cause. Work backward through all of them, mechanically:
+
+1. **Start at the missed KPI** (e.g. 60 Min Calls Booked) and walk one stage upstream at a time: Call Taken → Call Booked → Qualified → Pre-Qualified → Lead → Link Clicks → Impressions/CPM. At each stage, compute the actual conversion rate or cost between it and the stage above it.
+2. **At each stage, judge against the right baseline** — the sheet's own Target/Max row first; if that cell is blank, the client's own best historical month for that same metric (not a generic fallback) is the next best baseline. Only fall back to the global CPM/CPC fallback thresholds when neither exists.
+3. **Context-adjust before calling a number bad.** The same raw number means different things in different contexts — most importantly B2B vs. B2C: a B2B audience (e.g. Pacow's own funnel, agency owners, course creators) is narrower and more competed-for, so a higher CPM/CPC than a B2C parent-and-student audience is expected and not automatically a problem. Judge a number against what's normal for *that* client's ICP and *that* client's own history, not a single universal bar.
+4. **Find the single most-upstream broken number**, not just every anomaly in the list. If LPCR is bad AND Cost per Lead is bad, LPCR is the root cause (Cost per Lead is a downstream symptom of it) — name LPCR as the issue, not both. If two numbers are broken in ways that don't chain into each other (e.g. a landing page problem AND a separate show-up-rate problem), name both as independent issues, but don't let a real downstream problem get missed just because an upstream one is more dramatic.
+5. **State the chain explicitly when it reframes the ask.** "You asked about X, but X is a symptom — the actual root cause further upstream is Y" is the expected shape of the answer, not an aside.
+
+### Output format for this method: Issue → Solution → Tangible Action
+
+Every bottleneck, from this method or any other diagnostic conversation in this chat, gets exactly this shape — simple, no fluff:
+- **Issue:** the specific number, what it actually is, and what it should be (target/historical best).
+- **Solution:** the one underlying fix, in a sentence.
+- **Tangible Action:** the concrete next step — a test to run, a setting to change, a thing to check or fix. Not vague advice.
+
+This replaces "5 points of investigation per bottleneck" as the default shape for day-to-day diagnostic replies in this chat (ad-hoc deep dives, A/B test requests, "why is X low" questions). The full monthly portfolio "report" run still uses chat tables + the BAD-only recap at the end (see Output format below); within that report, each bottleneck's writeup should also use Issue/Solution/Action rather than open-ended "5 points of investigation" language.
+
 ### Interpretive rules (apply these before writing any diagnosis)
 
 1. **LPCR-first diagnosis rule:** when CTR is healthy but LPCR is low, name landing page/offer mismatch as the root cause of a Cost-per-Lead or lead-volume miss — ranked above CPM as the primary suspect.
@@ -55,7 +74,7 @@ CPM (audience/reach) → CTR (creative/copy) → LPCR (landing page/offer) → C
 - Chat tables, **never an artifact**.
 - Cover both good and bad metrics per client — not just the misses.
 - Every client gets a full, independent write-up. Never write "same as above."
-- For each identified bottleneck, give **5 points of investigation** — concrete, critically-reasoned "check X" items, not prescriptive fixes. Do real diagnostic thinking, not generic suggestions.
+- For each identified bottleneck, use **Issue → Solution → Tangible Action** (see "Backward decision-tree method" above) — not open-ended "5 points of investigation." Keep it simple and concrete, not generic.
 - End every full-portfolio report with a **BAD-only recap section**: hard-bad items only, borderline excluded. ⚠️ sanity-check flags (small sample, revenue lag, etc.) are still included there.
 
 ## Client roster
