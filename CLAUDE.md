@@ -63,7 +63,7 @@ This replaces "5 points of investigation per bottleneck" as the default shape fo
 2. **Zero-lead override rule:** real click volume + near-0 leads (LPCR near 0%) is always in scope and top priority — never hedge this under eligibility/intentionality uncertainty.
 3. **Low-volume reactivation rule:** real leads but 0 downstream movement (0 pre-qualified/qualified/booked) → default hypothesis is a disconnected post-lead pipeline (survey/booking link never reconnected), not "just needs more volume."
 4. **Pre-Qualified / Qualified interpretation rule:**
-   - 0/0 on both, confirmed the client doesn't use that stage by design → mark **"not tracked, skip evaluating"** (currently applies to **Core Medical Training Center** and **Smarta Tutoring**).
+   - 0/0 on both, confirmed the client doesn't use that stage by design → mark **"not tracked, skip evaluating"** (currently applies to **Core Medical Training Center**, **Smarta Tutoring**, and **Class101**).
    - Qualified nonzero while Pre-Qualified = 0 → proves the CRM/data pipe works. Diagnose as a **funnel/process gap** (survey being skipped/bypassed) — never call this a CRM/integration issue.
    - Only call something a CRM/integration issue when both fields are 0 with real lead volume AND there's no confirmation the client simply omits that stage.
 5. **Revenue-lag caveat:** Closing Rate / Cost per New Client / ROI computed over a narrow trailing window can look artificially good/bad since revenue events lag the spend that generated the lead by weeks. Flag once per client when relevant; don't treat as a hard signal alone, especially at n=1 or n=2 downstream sample sizes.
@@ -86,7 +86,7 @@ This replaces "5 points of investigation per bottleneck" as the default shape fo
 | Zinkerz | act_638396012894614 | `1zJqc4H7PsyAzext6MMpuGFYMPrr2Yrx1sUCCpy2fSho` | |
 | Core Medical Training Center | act_1101825501101670 | `1nordSfrBDgMIz80lf_VSbQA7Y9w4w9zxawph4okq2L8` | Pre-Qualified/Qualified not tracked by design — skip evaluating |
 | Personalized Prep | act_1747267276471518 | `1tNfePmCajYBhJRibCiVeUk4UJZPn1IXTnxW7X9k3W4Y` | |
-| Class101 | act_2980228195651210 | `1BDn5J24XwEhq6IagIqGZAOd6nO-J6QAGM5Xdc3ebDxk` | Ads MCP blocked on this account (rolling out) |
+| Class101 | act_2980228195651210 | `1BDn5J24XwEhq6IagIqGZAOd6nO-J6QAGM5Xdc3ebDxk` | Ads MCP blocked on this account (rolling out). Pre-Qualified/Qualified not tracked by design — skip evaluating |
 | North Avenue Education | act_10100817269307566 | `1Z82ommJsxEn13PArnAGGu1Ki5H1OAvhVWnhze-DnDKI` | |
 | Smarta Tutoring | act_597834280814934 (Ad Account #1 — the only funded one of 5 Smarta accounts under "Marta Mathews's Business") | `1hILrWWaiuV06tTlFmhPBj7iqfxIHiS1WMZUIzoqHweM` | Pre-Qualified/Qualified not tracked by design — skip evaluating. GBP currency. |
 
