@@ -13,6 +13,7 @@ Signs its own RS256 assertion by shelling out to `openssl`, so neither
     python3 scripts/sheets_api.py get    <sheet_id> <a1_range>
     python3 scripts/sheets_api.py append <sheet_id> <a1_range> <json_row>
     python3 scripts/sheets_api.py update <sheet_id> <a1_range> <json_row>
+    python3 scripts/sheets_api.py copyformat <sheet_id> <tab_id> <src_row> <dst_row> [cols]
 
 `append` and `update` print the request and exit without sending it unless
 --commit is passed, so a wrong range cannot overwrite live data by accident.
@@ -148,6 +149,41 @@ def update(sheet_id: str, a1_range: str, row: list) -> dict:
     return response.json()
 
 
+def copy_row_format(
+    sheet_id: str, tab_id: int, src_row: int, dst_row: int, columns: int = 1
+) -> None:
+    """Copy formatting from one row to another, by 1-based row number.
+
+    A freshly written row inherits no number format, so a date lands as
+    2026-10-06 where the rest of the column reads 10/6/2026. Copying the
+    format from an existing row keeps the column consistent.
+    """
+    grid = lambda row: {
+        "sheetId": tab_id,
+        "startRowIndex": row - 1,
+        "endRowIndex": row,
+        "startColumnIndex": 0,
+        "endColumnIndex": columns,
+    }
+    response = requests.post(
+        f"{SHEETS_URL}/{sheet_id}:batchUpdate",
+        headers=_headers(),
+        json={
+            "requests": [
+                {
+                    "copyPaste": {
+                        "source": grid(src_row),
+                        "destination": grid(dst_row),
+                        "pasteType": "PASTE_FORMAT",
+                    }
+                }
+            ]
+        },
+        timeout=30,
+    )
+    response.raise_for_status()
+
+
 def main() -> None:
     args = [a for a in sys.argv[1:] if a != "--commit"]
     commit = "--commit" in sys.argv
@@ -169,6 +205,11 @@ def main() -> None:
             return
         action = append if command == "append" else update
         print(json.dumps(action(sheet_id, a1_range, row), indent=2))
+    elif command == "copyformat":
+        sheet_id, tab_id, src_row, dst_row = rest[0], int(rest[1]), int(rest[2]), int(rest[3])
+        columns = int(rest[4]) if len(rest) > 4 else 1
+        copy_row_format(sheet_id, tab_id, src_row, dst_row, columns)
+        print(f"Copied format from row {src_row} to row {dst_row}.")
     else:
         sys.exit(f"Unknown command: {command}\n{__doc__}")
 
