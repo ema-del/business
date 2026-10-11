@@ -59,6 +59,9 @@ Before doing anything for a client (recaps, ads, copy, emails, call prep), read 
 - Offer, contract and status: "(Pacow) Sales & Active Client CRM 2026" sheet in "01. Clients".
 - Client data lives in Drive only. Never copy it into this repo (it's public).
 
+# Client offboarding
+When I say to offboard a client (or "do a client"), follow @client-offboarding.md. Always finish with the hand-off message draft, in the exact format in that file.
+
 # Rules
 - Draft emails and messages. Don't send without asking me.
 - Ask before changing anything live (ads, budgets, funnels, client-facing pages).
