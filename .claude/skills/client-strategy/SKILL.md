@@ -30,16 +30,19 @@ Read all of these before writing a word:
 0. **Client folder**: search Drive for `title contains '<client name>' and mimeType = 'application/vnd.google-apps.folder'`. Client folders sit next to IPS's. If more than 1 match, ask Ema.
 
 1. **Client profile**: Drive folder "00. Client Profiles (Claude)" (id `1yryquCGWQNIS-kUvOm81Wjqg1SHFEw6f`), doc "Client Profile: Name (Business)".
-2. **Intake form**: sheet "Student GrowthOS™ Accelerator Intake Form (Responses)" (id `1oA8hD1zDmwIbMGvN6EkrlcPbYVGU3unty0Uhril5r48`). If the client's row isn't there or Sheets is down, use the profile (it copies the intake) and say so. The "Your Journey To Us" answers (why they chose Pacow) are only on the sheet; ask Ema to paste them if needed.
+2. **Intake form (required, full row)**: sheet "Student GrowthOS™ Accelerator Intake Form (Responses)" (id `1oA8hD1zDmwIbMGvN6EkrlcPbYVGU3unty0Uhril5r48`). Find the client's row (match email or name) and read every column, including the "Your Journey To Us" answers (why they chose Pacow, hesitations, what made them trust us).
+   - Sheets connector down: export it with Drive `download_file_content` (`exportMimeType` xlsx), then read the saved file with `python3 -I` + openpyxl and pull the client's row.
+   - Row still not found: say so at checkpoint 1 and ask Ema to paste the responses. The client profile copies most of the intake, but not the "Your Journey To Us" answers.
 3. **Onboarding call doc**: "(XX) onboarding call" in the client's "01. Onboarding" folder. This says which offer we're going for and the funnel.
-4. **Every email with the client**: Gmail search `from:@<client domain> OR to:@<client domain>`, plus the contact's name. Read each thread in full (`get_thread`, PLAIN_TEXT), not just previews. Case studies, origin story and brand notes usually arrive by email.
-5. **CRM**: "(Pacow) Sales & Active Client CRM 2026" in "01. Clients" for offer, contract and ad budget. If they're not in it yet, say so. If the Sheets connector is down, use Drive `download_file_content` (xlsx export) or a Drive fullText search for the client name; Drive `read_file_content` only shows the first rows.
+4. **Every email with the client**: Gmail search `from:@<client domain> OR to:@<client domain> OR cc:@<client domain>`, plus searches on the contacts' names and the business name (catches Viktorija's threads and forwards). Read each thread in full (`get_thread`, PLAIN_TEXT), not just previews. Open attachments and shared Drive/Docs links in them (Drive `read_file_content`). Case studies, origin story, testimonials, brand notes and ICP docs usually arrive this way.
+5. **Slack**: find the client's private channel (`slack_search_channels` on the business name or short code; include private channels) and read it in full (`slack_read_channel`, plus `slack_read_thread` on threads with replies). Also search messages that mention the client name (`slack_search_public_and_private`), to catch team chat about them. Read shared files (`slack_read_file`) and linked docs. No channel yet: say so.
+6. **CRM**: "(Pacow) Sales & Active Client CRM 2026" in "01. Clients" for offer, contract and ad budget. If they're not in it yet, say so. If the Sheets connector is down, use Drive `download_file_content` (xlsx export) or a Drive fullText search for the client name; Drive `read_file_content` only shows the first rows.
 
 Drive searches return pages: always follow `nextPageToken` until none comes back, or you'll miss folders and files.
 
 Never copy client data into this repo. It's public. Client data lives in Drive and chat only.
 
-**Checkpoint 1.** Tell Ema "got it" with a short bullet summary: business, the offer we're selling (price, length, next start dates), current numbers (leads, booking rate, show rate, close rate), qualified-lead definition, proof available (case studies, stats), goals and fears, setup status. If sources disagree (price, dates, budget), list both values. End with any gap that blocks the strategy. Wait for her go.
+**Checkpoint 1.** Tell Ema "got it" with a short bullet summary: business, the offer we're selling (price, length, next start dates), current numbers (leads, booking rate, show rate, close rate), qualified-lead definition, proof available (case studies, stats), goals and fears, setup status. Then a **"What they sent"** list: every useful thing found in email or Slack (case studies, testimonials, origin story, brand docs, videos, stats, access), with the date and source. If sources disagree (price, dates, budget), list both values. End with any gap that blocks the strategy. Wait for her go.
 
 ## Step 2: Drive setup (skip in "no setup" mode)
 
