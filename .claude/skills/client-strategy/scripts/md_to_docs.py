@@ -5,14 +5,14 @@ Usage: python3 md_to_docs.py doc.md > requests.json
 Then send {"requests": <that list>} with Google Docs update_doc on the blank doc.
 
 Supports: # / ## / ### headings, paragraphs, "- " bullets, "1. " numbered
-items, | tables | (first row bold, separator row skipped), **bold** and
-[text](url) inline. A blank line separates blocks.
+items, | tables | (first row bold, separator row skipped), **bold**, *italic*
+and [text](url) inline. Write [PLACEHOLDER] links as plain text, not [x]([LINK]). A blank line separates blocks.
 """
 import json
 import re
 import sys
 
-INLINE = re.compile(r"\*\*(.+?)\*\*|\[([^\]]+)\]\(([^)]+)\)")
+INLINE = re.compile(r"\*\*(.+?)\*\*|\[([^\]]+)\]\(([^)]+)\)|(?<!\*)\*([^*\s][^*]*?)\*(?!\*)")
 
 
 def u16(s):
@@ -26,8 +26,13 @@ def parse_inline(text):
         out += text[pos:m.start()]
         start = u16(out)
         if m.group(1) is not None:
-            out += m.group(1)
+            inner, inner_spans = parse_inline(m.group(1))  # e.g. a link inside bold
+            out += inner
             spans.append((start, u16(out), {"bold": True}, "bold"))
+            spans += [(start + a, start + b, st, f) for a, b, st, f in inner_spans]
+        elif m.group(4) is not None:
+            out += m.group(4)
+            spans.append((start, u16(out), {"italic": True}, "italic"))
         else:
             out += m.group(2)
             spans.append((start, u16(out), {"link": {"url": m.group(3)}}, "link"))
