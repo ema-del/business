@@ -8,3 +8,4 @@ Read before every strategy run. These override SKILL.md. Add 1 dated line per ne
 - 2026-10-16: Drive setup duplicates file names only, blank, and never duplicates what's already there.
 - 2026-10-18: No client email at the end. Give Ema a recap of every placeholder and open question instead.
 - 2026-10-22: Always write every doc straight into the client's Google Docs (the blank ones from the Drive setup) with `scripts/md_to_docs.py`. Ema reviews in Drive, chat gets links only.
+- 2026-10-22: Marketing Strategy = copy of the formatted gold strategy, content swapped in place (chips, TOC, checkboxes kept). Every link must point to this client's docs. Building it from markdown looked bad and Ema had to redo it.

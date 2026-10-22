@@ -119,6 +119,12 @@ Offer & guarantee and Stats have no doc of their own: put them in the ICP & Pers
 
 **CRM messages and Marketing Strategy**: match IPS's structure and channels (SMS/email) exactly. Use the client's real call-taker name, booking link and cohort dates, or placeholders.
 
+**Marketing Strategy doc: never build it from markdown.** Copy the formatted gold strategy (Drive `copy_file` of IPS's "(IPS) Marketing Strategy - Growth OS Accelerator", or the doc Ema points to) over the blank one, or edit the copy Ema pasted in. Keep her formatting (real table of contents, bold labels, 👉 lines, checkboxes, smart chips) and swap the content in place:
+- Read it with `read_doc` and find every smart chip (`richLink`), person chip and link. Every one must point to THIS client's doc. The API can't create chips, so replace each chip with the client doc's title as a hyperlink.
+- Replace the client name, offer, guarantee, stats, funnel map (pick the Whimsical "(Details)" map for the funnel type), budget, targeting, the founder's name in "record your videos", and delete any other client's leftovers (extra ICP lists, case studies).
+- Use `replaceAllText` for short swaps. For deletes and inserts, go from the highest index to the lowest.
+- Read it back and check no other client's name or link is left. Tell Ema to refresh the table of contents and untick any approval checkboxes copied from the other client (the API can't do either).
+
 ## Output rules
 
 - **Always write each doc into its Google Doc in the client's Drive folder** (the blank docs from step 2), so the link stays the same. Don't paste full docs in chat; in chat give Ema the doc link plus 1-2 lines on what's in it.
