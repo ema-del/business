@@ -89,7 +89,9 @@ Build in this order. Before each doc, read IPS's version (Drive `read_file_conte
 | 15 | CRM: Long Term | `1El0lsI9QKFn_mtFdTdGqS4h9xS4CG6E2tvOnxkziPCA` |
 | 16 | Marketing Strategy (pulls 1-15 together) | `1ypkfUrrrPA2BAL2VnbW3osQ9C8nDkQyl9u55_lOvZ3Y` |
 
-**Checkpoint 2.** After docs 1-3 (ICP, offer & guarantee, stats), stop and wait for Ema's OK. Everything after builds on them. After that, run docs 4-16 one at a time without stopping, unless Ema says otherwise.
+**Checkpoint 2.** After docs 1-3 (ICP, offer & guarantee, stats), stop and wait for Ema's OK. Everything after builds on them. After that, run docs 4-16 one at a time without stopping, unless Ema says otherwise. If Ema says "go for all", skip this stop and build all 16; she reviews in Drive at the end.
+
+Offer & guarantee and Stats have no doc of their own: put them in the ICP & Personas doc as their own sections, and repeat them in the Marketing Strategy doc.
 
 ### Doc rules
 
@@ -119,7 +121,10 @@ Build in this order. Before each doc, read IPS's version (Drive `read_file_conte
 
 ## Output rules
 
-- Output each doc **in chat**, formatted for Google Docs (markdown tables Ema can paste with right-click → "Paste from Markdown"). Don't write into the Drive docs unless Ema says "write it" or "put it in the doc".
+- **Always write each doc into its Google Doc in the client's Drive folder** (the blank docs from step 2), so the link stays the same. Don't paste full docs in chat; in chat give Ema the doc link plus 1-2 lines on what's in it.
+  - How: write the doc as simple markdown in the scratchpad (headings `#`/`##`/`###`, `- ` bullets, `1. ` lists, `| tables |`, `**bold**`, `[text](url)`; write `(` `)` inside URLs as `%28` `%29`; use `| | |` as the first table row for a table without a header). Run `python3 -I .claude/skills/client-strategy/scripts/md_to_docs.py doc.md` and send its output as `requests` to Google Docs `update_doc` on the blank doc. Then read the doc back with Drive `read_file_content` to check it.
+  - The script only works on an **empty** doc. If the doc already has content, don't overwrite it: ask Ema (or add the new version as a new tab).
+  - Google Docs connector down: say so, and fall back to giving the doc in chat.
 - Follow `writing-style.md` and the CLAUDE.md writing rules in every doc: no em dashes, no "not X, it's Y" sentences, no banned words, digits for numbers.
 - Never invent proof, numbers, stats, case studies or life events. Missing = [PLACEHOLDER] or [CLIENT: ...].
 - End every doc with a short "Confirm with <client contact>" list: only real open questions, 2-5 bullets.
