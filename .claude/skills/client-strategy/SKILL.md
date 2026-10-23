@@ -138,8 +138,9 @@ Build in this order. Before each doc, read IPS's version (Drive `read_file_conte
 When Ema shares a VA brief (Canva brief, GHL brief, etc.) and says "make it for <client>":
 - **Edit that doc in place** (Google Docs `update_doc`, revision-guarded, highest index first). Don't create a new doc and don't rewrite its structure.
 - **Swap every client-specific element** to the new client: business name, website, Instagram and other links, ad names/numbering (fix typos like "Paing 5"), and every ad's copy.
-- **Keep the generic parts** as they are: instructions, Loom/training links, example folders, the template link, image placeholders.
-- **Ad copy in a brief follows that brief's own format** (e.g. title, italic audience line, bold hook, body, proof lines with bold results, mechanism line, CTA), filled with the client's real pains, proof and offer. Same bold/italic pattern as the original.
+- **Keep the generic parts** as they are: instructions, Loom/training links, example folders.
+- **Never reuse the duplicated brief's template.** The template link, template image and ad copy format left in the brief belong to the old client. Replace them with the template Ema names, or the one you pick and name to her (e.g. "(IPS) ads" + "(IPS) Vertical ads", pages 1-5). Ask if unsure.
+- **Ad copy in the brief follows the chosen template's elements**, word for word per element (e.g. a "same on every ad" block for headline, name, handle, CTA, photo and background, then per ad: name + body), filled with the client's real pains, proof and offer.
 - Read the doc back after editing and check every element changed.
 
 ## Output rules
