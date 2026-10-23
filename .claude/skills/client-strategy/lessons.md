@@ -8,3 +8,5 @@ Read before every strategy run. These override SKILL.md. Add 1 dated line per ne
 - 2026-10-16: The reporting sheet is always a copy of "(TEMPLATE) - Business Reporting B2C", never another client's sheet.
 - 2026-10-16: Drive setup duplicates file names only, blank, and never duplicates what's already there.
 - 2026-10-18: No client email at the end. Give Ema a recap of every placeholder and open question instead.
+- 2026-10-23: Never build or edit ads in Canva. Pick the template (or use the one Ema names) and give the exact copy for every element, word for word.
+- 2026-10-23: When Ema shares a VA brief, update that same doc for the client: swap every client element (name, links, ad names, copy), keep the instructions and format.
