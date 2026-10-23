@@ -1,11 +1,11 @@
 ---
 name: client-strategy
-description: Builds the full GrowthOS marketing strategy for a new Pacow client (ICP & personas, offer & guarantee, stats, pain points, ad copy, objection videos, VSL, thank-you VSL, form questions, CRM messages, marketing strategy doc), using the IPS strategy as the gold example. Use when Ema says "strategy <client>", "build the strategy for <client>", "do <client>'s strategy", or asks for any single strategy doc for a client ("strategy GC VSL", "pain points for <client>").
+description: Builds the full GrowthOS marketing strategy for a new Pacow client (ICP & personas, offer & guarantee, stats, pain points, ad copy, objection videos, VSL, thank-you VSL, form questions, CRM messages, marketing strategy doc), using IPS's strategy as the template of which docs and sections to build (never its content). Use when Ema says "strategy <client>", "build the strategy for <client>", "do <client>'s strategy", or asks for any single strategy doc for a client ("strategy GC VSL", "pain points for <client>").
 ---
 
 # Client strategy (GrowthOS)
 
-One line from Ema in, a full strategy out. Ema gives the client, the offer they're selling and the funnel type. You gather everything yourself, check in twice, and build every doc in IPS's format.
+One line from Ema in, a full strategy out. Ema gives the client, the offer they're selling and the funnel type. You gather everything yourself, check in twice, and build every doc with the same elements as IPS, written from scratch for this client.
 
 Before you start, read `lessons.md` in this folder. It holds Ema's past corrections. They override anything below.
 
@@ -15,7 +15,7 @@ Ema types something like: `strategy Gaja Collective, coach certification, free t
 
 - **Client** (required). Find the short code (e.g. GC, IPS) from their Drive folder or file names.
 - **Offer** (the one program we advertise). If missing, take it from the onboarding call doc. If still unclear, ask.
-- **Funnel** (free training, webinar, DM, etc.). Default: free training funnel, like IPS.
+- **Funnel** (free training, webinar, Meta form, DM, etc.). Find its Whimsical "(Details)" map (e.g. "New Free Training Funnel (Details)", "Booking Meta Form Funnel (Details)") and build every doc for THAT funnel's steps. IPS is a free training funnel; don't carry its landing page, survey or "watch the training" steps into other funnels. If the funnel is unclear, ask.
 
 ### Modes
 - **Full** (default): gather → Drive setup → all docs → recap.
@@ -42,6 +42,8 @@ Drive searches return pages: always follow `nextPageToken` until none comes back
 
 Never copy client data into this repo. It's public. Client data lives in Drive and chat only.
 
+7. **Client's own assets**: their website (program pages, prices, schedules, requirements, financial aid, reviews, stats like pass rates), socials and any page they list in the intake. These answer most gaps before you mark anything [PLACEHOLDER].
+
 **Checkpoint 1.** Tell Ema "got it" with a short bullet summary: business, the offer we're selling (price, length, next start dates), current numbers (leads, booking rate, show rate, close rate), qualified-lead definition, proof available (case studies, stats), goals and fears, setup status. Then a **"What they sent"** list: every useful thing found in email or Slack (case studies, testimonials, origin story, brand docs, videos, stats, access), with the date and source. If sources disagree (price, dates, budget), list both values. End with any gap that blocks the strategy. Wait for her go.
 
 ## Step 2: Drive setup (skip in "no setup" mode)
@@ -67,6 +69,8 @@ Rules:
 - Then list what you made and what you skipped, with links.
 
 ## Step 3: build the docs
+
+**IPS is a template of elements, not content.** It tells you which docs exist, which sections each one has, roughly how long, and the house formatting style. Everything inside comes from THIS client: their audience (age, gender, life stage), their funnel, their offer, numbers, proof, wording and assumptions. IPS sells to moms, so never carry over "she/her", "moms", or any IPS audience, claim, stat, guarantee wording or funnel step. Use gender-neutral wording ("they", "you") unless the client's own data says the audience is one gender.
 
 Build in this order. Before each doc, read IPS's version (Drive `read_file_content` with `includeComments: true`, the comments show what the client pushed back on) and match its **structure and length only**. Rewrite every word for the new client: never reuse IPS's claims, numbers or stories. IPS's docs predate some of Ema's rules (its ICP uses a segment split, some docs have em dashes and "this isn't X, it's Y" lines), so `lessons.md` and `writing-style.md` always win over IPS's wording. Some IPS docs have several tabs: follow the newest one ("Updated" over "Tab 1").
 
@@ -97,7 +101,7 @@ Offer & guarantee and Stats have no doc of their own: put them in the ICP & Pers
 
 **ICP & Personas**
 - Section 1 market overview (market context, key challenge, segmentation logic, buying calendar with real enrollment dates), Section 2 personas, Section 3 intake claims with a verdict, Section 4 messaging per persona.
-- Personas = **1 archetype, different places in life** (e.g. "the burned-out corporate exec", "the woman who just got laid off", "the empty nester"). Never random splits like "aspiring X vs adjacent professional". Table: persona · her place in life · what keeps her up at night · what she needs to hear · proof we can use. Map real case studies to each persona; mark personas without proof as [NEED: case study].
+- Personas = **1 archetype, different places in life** (e.g. "the burned-out corporate exec", "the one who just got laid off", "the empty nester"). Never random splits like "aspiring X vs adjacent professional". Table: persona · their place in life · what keeps them up at night · what they need to hear · proof we can use. Map real case studies to each persona; mark personas without proof as [NEED: case study].
 
 **Offer & Guarantee** (IPS style)
 - Offer: 1 headline line with a real timeline from the program ("Become a ... & ... in 21 Weeks").
@@ -107,7 +111,7 @@ Offer & guarantee and Stats have no doc of their own: put them in the ICP & Pers
 
 **Pain points**: real web research (extended search, several queries in one turn: Reddit/forums, reviews of competitors, news). Plus the client's own case-study quotes, which are usually the best voice of customer. Output 5 pains, each: the pain in their words as a heading, 2-3 bullets of evidence with quotes, 1 hook. Then "the deepest emotional pain" line and which pains suit cold ads vs landing page/retargeting. End with a Sources list of links.
 
-**Ad copy**: 4 ads + 4 headlines, IPS structure (hook naming the audience in the first 3-5 words, what they'll learn in the free training with ✅/✔ bullets, proof lines, CTA to watch then book a free Career Call). 1 ad carries the guarantee.
+**Ad copy**: 4 ads + 4 headlines with IPS's elements (hook naming the audience in the first 3-5 words, ✅/✔ bullets on what they get from the next funnel step, proof lines, CTA that matches the client's funnel, e.g. watch the training, or fill the Meta form and book). 1 ad carries the guarantee.
 
 **Objection videos**: follow the "Updated" tab of IPS's doc, minus its price video. 5 scripts in the founder's voice, each a standalone ~30-second video. Keep IPS's header (record vertically, 5 videos, 1 USD/video, 5 USD/day, goal). Objections are reasons someone hesitates to **start with this client** (saturation, age, time, will I get clients, which program is legit, etc.). Hooks get to the objection in the first sentence. **Never mention the client's price.** Comparing to other things (a degree, years of school) is fine. Add 2 backup objections as one-liners.
 
@@ -117,13 +121,9 @@ Offer & guarantee and Stats have no doc of their own: put them in the ICP & Pers
 
 **Form questions**: Form 1 opt-in, Form 2 qualification survey, Form 3 booking. Build qualifiers from the client's "what makes a lead qualified" answer (location, budget readiness, time, etc.). Mark disqualifying answers ❌ (cannot book). Add 1 non-disqualifying persona question so the closer knows which story to lead with. Short "why these questions" bullets.
 
-**CRM messages and Marketing Strategy**: match IPS's structure and channels (SMS/email) exactly. Use the client's real call-taker name, booking link and cohort dates, or placeholders.
+**CRM messages and Marketing Strategy**: use IPS's set of flows and channels (SMS/email) as the checklist, then fit each flow to the client's funnel (e.g. a Meta form funnel has no landing-page survey). Use the client's real call-taker name, booking link and cohort dates, or placeholders.
 
-**Marketing Strategy doc: never build it from markdown.** Copy the formatted gold strategy (Drive `copy_file` of IPS's "(IPS) Marketing Strategy - Growth OS Accelerator", or the doc Ema points to) over the blank one, or edit the copy Ema pasted in. Keep her formatting (real table of contents, bold labels, 👉 lines, checkboxes, smart chips) and swap the content in place:
-- Read it with `read_doc` and find every smart chip (`richLink`), person chip and link. Every one must point to THIS client's doc. The API can't create chips, so replace each chip with the client doc's title as a hyperlink.
-- Replace the client name, offer, guarantee, stats, funnel map (pick the Whimsical "(Details)" map for the funnel type), budget, targeting, the founder's name in "record your videos", and delete any other client's leftovers (extra ICP lists, case studies).
-- Use `replaceAllText` for short swaps. For deletes and inserts, go from the highest index to the lowest.
-- Read it back and check no other client's name or link is left. Tell Ema to refresh the table of contents and untick any approval checkboxes copied from the other client (the API can't do either).
+**Marketing Strategy doc**: match the formatting of Ema's current strategy docs (real table of contents, bold labels, 👉 lines, checkboxes, a link to each of this client's docs). If Ema pastes another client's strategy in as the layout, keep the layout and rewrite every word for this client: offer, guarantee, stats, funnel map, budget, targeting, the founder's name, and delete the other client's leftovers. Every link must point to this client's docs (the API can't create smart chips, so use the doc title as a hyperlink). Read it back and check no other client's name, link or assumption is left. Tell Ema to refresh the table of contents and untick approval checkboxes copied from the other client.
 
 ## Output rules
 
