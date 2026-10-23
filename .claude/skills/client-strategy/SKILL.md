@@ -117,6 +117,32 @@ Build in this order. Before each doc, read IPS's version (Drive `read_file_conte
 
 **CRM messages and Marketing Strategy**: match IPS's structure and channels (SMS/email) exactly. Use the client's real call-taker name, booking link and cohort dates, or placeholders.
 
+### Ad creatives (static ads): copy only, never design
+
+- **Never create, copy or edit ad designs in Canva.** The VA or Ema builds the visuals.
+- **Template:** use the one Ema names. If she doesn't name one, pick it yourself from the Canva template library ("NEW", design `DAHOUShgf9M`) or a past client's ad file (e.g. "(IPS) ads"), and say which design and page(s) you picked and why in 1 line.
+- **Output: the exact copy for every text element on that template, word for word**, per ad, ready to paste. Read the template's elements first (Canva `read-design`, `design_content`) so you know which elements exist (headline, body, name, handle, CTA, labels). Format per ad:
+  ```
+  Ad 1 · Pain 1 - First launch
+  Headline: ...
+  Body: ...
+  Name: ...
+  Handle: ...
+  CTA: ...
+  ```
+  Keep each element about as long as the template's original text, so it fits. Same copy for feed and vertical unless the vertical has extra elements.
+- **Images:** say which client photo or logo goes where (e.g. founder photo in place of the template's person, client logo in place of the template's background icon). Never invent images.
+
+### VA briefs (Ema shares a brief doc)
+
+When Ema shares a VA brief (Canva brief, GHL brief, etc.) and says "make it for <client>":
+- **Edit that doc in place** (Google Docs `update_doc`, revision-guarded, highest index first). Don't create a new doc and don't rewrite its structure.
+- **Swap every client-specific element** to the new client: business name, website, Instagram and other links, ad names/numbering (fix typos like "Paing 5"), and every ad's copy.
+- **Keep the generic parts** as they are: instructions, Loom/training links, example folders.
+- **Never reuse the duplicated brief's template.** The template link, template image and ad copy format left in the brief belong to the old client. Replace them with the template Ema names, or the one you pick and name to her (e.g. "(IPS) ads" + "(IPS) Vertical ads", pages 1-5). Ask if unsure.
+- **Ad copy in the brief follows the chosen template's elements**, word for word per element (e.g. a "same on every ad" block for headline, name, handle, CTA, photo and background, then per ad: name + body), filled with the client's real pains, proof and offer.
+- Read the doc back after editing and check every element changed.
+
 ## Output rules
 
 - Output each doc **in chat**, formatted for Google Docs (markdown tables Ema can paste with right-click → "Paste from Markdown"). Don't write into the Drive docs unless Ema says "write it" or "put it in the doc".
