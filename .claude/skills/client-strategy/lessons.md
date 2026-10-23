@@ -10,3 +10,4 @@ Read before every strategy run. These override SKILL.md. Add 1 dated line per ne
 - 2026-10-22: Always write every doc straight into the client's Google Docs (the blank ones from the Drive setup) with `scripts/md_to_docs.py`. Ema reviews in Drive, chat gets links only.
 - 2026-10-22: Marketing Strategy uses Ema's formatted layout (TOC, bold labels, checkboxes, doc links). Every link must point to this client's docs.
 - 2026-10-23: IPS is a template of ELEMENTS (which docs, which sections), never content. Don't carry IPS's audience (moms, "she/her"), funnel steps, wording or numbers. Gender-neutral unless the client's data says otherwise. Fill gaps from the client's own website and assets first.
+- 2026-10-23: Format Ad Copy, Obj videos, VSL, TY VSL and Form questions like IPS (bold labels, no headings, 12pt spacing, red recording notes, yellow placeholder line). Use `scripts/ips_format.py`. Markdown headings looked wrong.
