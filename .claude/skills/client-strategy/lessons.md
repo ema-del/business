@@ -11,3 +11,4 @@ Read before every strategy run. These override SKILL.md. Add 1 dated line per ne
 - 2026-10-23: Never build or edit ads in Canva. Pick the template (or use the one Ema names) and give the exact copy for every element, word for word.
 - 2026-10-23: When Ema shares a VA brief, update that same doc for the client: swap every client element (name, links, ad names, copy), keep the instructions and format.
 - 2026-10-23: In a duplicated VA brief, never keep the old client's template or copy format. Use the template Ema suggests or the one Claude suggests (default: IPS ads, pages 1-5), and write the copy to that template's elements.
+- 2026-10-26: When Ema says "update the docs", write straight into the client's Drive docs (edit existing drafts in place, create the missing ones in the right folders), formatted exactly like IPS's version of each doc: same headings, bold, red recording notes, bullets, checkboxes, tables. Never copy IPS's content.
