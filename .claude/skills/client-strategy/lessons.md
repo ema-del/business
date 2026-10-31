@@ -11,3 +11,6 @@ Read before every strategy run. These override SKILL.md. Add 1 dated line per ne
 - 2026-10-23: Never build or edit ads in Canva. Pick the template (or use the one Ema names) and give the exact copy for every element, word for word.
 - 2026-10-23: When Ema shares a VA brief, update that same doc for the client: swap every client element (name, links, ad names, copy), keep the instructions and format.
 - 2026-10-23: In a duplicated VA brief, never keep the old client's template or copy format. Use the template Ema suggests or the one Claude suggests (default: IPS ads, pages 1-5), and write the copy to that template's elements.
+- 2026-10-31: When Ema asks for the docs in Drive, copy each example doc (IPS) into the client's folders with Drive copy_file and rewrite the text in place, so formatting stays identical. Never build them as new blank docs. Roadmap and Tech Setup are Sheets (copy IPS's and reset them), and 02. Creatives needs an "Ad Bank" folder.
+- 2026-10-31: The Marketing Strategy template is now the AA doc (1YMxumVsarm8y1CGd6POpa-dg3AuicP0qSf26AYC0Ohk), not IPS's. Copy it and update every section and link for the client.
+- 2026-10-31: "Direct booking" funnels keep the free-training funnel structure, but the ad CTA is "see how it works" and the VSL is a "see how it works" video that leads to booking the call.
